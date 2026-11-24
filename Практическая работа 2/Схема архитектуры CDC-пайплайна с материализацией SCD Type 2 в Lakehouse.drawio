@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="d5NjEG-mOWVeawsjMUvn">
+    <mxGraphModel dx="535" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-5" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-6" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Изменения в WAL&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;+ Snapshot&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.141" y="-2" as="geometry">
+            <mxPoint x="10" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="PostgreSQL&lt;div&gt;БД&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="90" x="960" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-8" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-9" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;CDC события&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1505" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Debezium CDC Connector" vertex="1">
+          <mxGeometry height="60" width="120" x="1190" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-15" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-28" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;&quot; style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Поток JSON&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.336" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Kafka" vertex="1">
+          <mxGeometry height="90" width="90" x="1430" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-14" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-50" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-14" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Распарсенные события&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0193" y="-2" as="geometry">
+            <mxPoint x="-66" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Обработка событий с помощью Spark Structured Streaming +&lt;div&gt;Watermark(event time)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="134" x="1500" y="1065" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Преобразование в SCD Type 2 с закрытием старой и открытием новой версий&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="150" x="1200" y="1065" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-40" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="1345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-41" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Файлы Parquet с данными." vertex="1">
+          <mxGeometry relative="1" x="0.0899" y="1" as="geometry">
+            <mxPoint x="23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-16" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" value="MinIO Объектное хранилище&amp;nbsp;" vertex="1">
+          <mxGeometry height="90" width="80" x="880" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-17" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="EjBv-kTkP4qxOdVYbCH8-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1130" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-29" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;&quot; style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Parquet и SCD&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1636" y="1" as="geometry">
+            <mxPoint x="-7" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-37" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-45" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Инфо. о том где лежат данные" vertex="1">
+          <mxGeometry relative="1" x="-0.2108" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Apache Iseberg&lt;div&gt;(Исторические таблицы)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1000" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-38" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-22">
+          <mxGeometry relative="1" x="0.1304" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-39" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Передача метаданных" vertex="1">
+          <mxGeometry relative="1" x="-0.4043" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Lakekeeper&lt;div&gt;Каталог таблиц&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1000" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-27" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-43" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Результаты SQL-запросов" vertex="1">
+          <mxGeometry relative="1" x="-0.149" y="-3" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Trino (SQL запросы)" vertex="1">
+          <mxGeometry height="60" width="120" x="1100" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Приложение" vertex="1">
+          <mxGeometry height="60" width="120" x="945" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-25" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Отдел аналитики&lt;div&gt;ну или Бухгалтерия&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1360" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-35" edge="1" parent="1" source="EjBv-kTkP4qxOdVYbCH8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="EjBv-kTkP4qxOdVYbCH8-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-44" connectable="0" parent="EjBv-kTkP4qxOdVYbCH8-35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;&quot; style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Файлы с данными&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.1908" y="-1" as="geometry">
+            <mxPoint x="1" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-48" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" value="Легенда" vertex="1">
+          <mxGeometry height="170" width="380" x="1150" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="EjBv-kTkP4qxOdVYbCH8-49" parent="EjBv-kTkP4qxOdVYbCH8-48" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;ul class=&quot;qwen-markdown-list&quot; dir=&quot;ltr&quot; style=&quot;white-space: pre-line; margin: 1rem 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); padding-inline-start: 1.625em; text-align: start; font-family: system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, Inter, NotoSansHans, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;&lt;li class=&quot;qwen-markdown-list-item&quot; dir=&quot;ltr&quot; style=&quot;color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208)); margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227);&quot;&gt;&lt;span class=&quot;qwen-markdown-strong&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); font-weight: 600; unicode-bidi: normal;&quot;&gt;Белые части&lt;/span&gt;&lt;span class=&quot;qwen-markdown-text&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt;&amp;nbsp;— внешние системы/потребители: Приложение, отдел аналитики.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;qwen-markdown-list-item&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227);&quot;&gt;&lt;span class=&quot;qwen-markdown-strong&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); font-weight: 600; unicode-bidi: normal; color: rgb(0, 153, 153);&quot;&gt;Голубой уровень&lt;/span&gt;&lt;span class=&quot;qwen-markdown-text&quot; style=&quot;color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208)); margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt; — источники и транспорт данных: PostgreSQL, Debezium, Kafka.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;qwen-markdown-list-item&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227);&quot;&gt;&lt;span class=&quot;qwen-markdown-strong&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); font-weight: 600; unicode-bidi: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 204, 0);&quot;&gt;Зеленый &lt;span class=&quot;qwen-markdown-strong&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt;&lt;span class=&quot;qwen-markdown-text&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt;&lt;span class=&quot;qwen-markdown-text-node&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227);&quot;&gt;уровень&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;qwen-markdown-text&quot; style=&quot;color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208)); margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt;&amp;nbsp;— обработка и трансформация данных: Spark, SCD-преобразование, Iceberg.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;qwen-markdown-list-item&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227);&quot;&gt;&lt;span class=&quot;qwen-markdown-strong&quot; dir=&quot;ltr&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); font-weight: 600; unicode-bidi: normal; color: rgb(102, 0, 204);&quot;&gt;Фиолетовый уровень&lt;/span&gt;&lt;span class=&quot;qwen-markdown-text&quot; style=&quot;color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208)); margin: 0px; padding: 0px; box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(227, 227, 227); unicode-bidi: normal;&quot;&gt; — хранение и запросы: MinIO, Lakekeeper, Trino.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="25" width="365" x="5" y="85" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

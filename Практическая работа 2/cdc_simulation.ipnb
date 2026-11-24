@@ -1,0 +1,53 @@
+from datetime import datetime
+db_state = {
+    101: {"owner": "Иванов", "status": "active", "updated_at": "2024-02-01"}
+}
+
+
+cdc_events = [
+    {"op": "c", "after": {"id": 101, "owner": "Иванов", "status": "active"}, "ts": "2024-02-01"},
+    {"op": "u", "before": {"id": 101}, "after": {"id": 101, "owner": "Петров", "status": "active"}, "ts": "2024-03-01"},
+    {"op": "u", "before": {"id": 101}, "after": {"id": 101, "owner": "Петров", "status": "closed"}, "ts": "2024-04-01"}
+]
+
+
+scd_table = []
+
+print("--- Начинаем обработку CDC-потока (как в Spark) ---")
+
+for event in cdc_events:
+    rec_id = event["after"]["id"]
+    new_data = event["after"]
+    ts = event["ts"]
+
+    current_record = next((r for r in scd_table if r["id"] == rec_id and r["is_current"]), None)
+
+    if event["op"] == "c":
+        scd_table.append({
+            "id": rec_id, "owner": new_data["owner"], "status": new_data["status"],
+            "valid_from": ts, "valid_to": "9999-12-31", "is_current": True
+        })
+        print(f"[{ts}] INSERT: Добавлен счет {rec_id} (Владелец: {new_data['owner']})")
+
+    elif event["op"] == "u":
+        if current_record and (current_record["owner"] != new_data["owner"] or current_record["status"] != new_data["status"]):
+            current_record["valid_to"] = ts
+            current_record["is_current"] = False
+
+            scd_table.append({
+                "id": rec_id, "owner": new_data["owner"], "status": new_data["status"],
+                "valid_from": ts, "valid_to": "9999-12-31", "is_current": True
+            })
+            print(f"[{ts}] UPDATE: Владелец счета {rec_id} изменен на {new_data['owner']}, статус {new_data['status']}")
+
+print("\n--- Итоговая таблица SCD Type 2 в Lakehouse ---")
+print(f"{'ID':<5} | {'Владелец':<10} | {'Статус':<8} | {'valid_from':<12} | {'valid_to':<12} | {'is_current'}")
+print("-" * 75)
+for row in scd_table:
+    print(f"{row['id']:<5} | {row['owner']:<10} | {row['status']:<8} | {row['valid_from']:<12} | {row['valid_to']:<12} | {row['is_current']}")
+
+print("\n--- Запрос: Кто был владельцем счета 101 на 15 марта 2024? ---")
+target_date = "2024-03-15"
+for row in scd_table:
+    if row["valid_from"] <= target_date < row["valid_to"]:
+        print(f"Ответ: Владелец - {row['owner']}, Статус - {row['status']}")
